@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eksplor Seminar — Synear</title>
+<link rel="icon" href="assets/image/logo3.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar-syn">
+  <a href="beranda.html" class="brand">
+    <img src="assets/image/logo.png" alt="Synear Logo" class="brand-logo">
+  </a>
+
+  <button class="nav-toggle-btn" id="navToggleBtn" aria-label="Buka menu">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <ul class="navbar-links" id="navbarLinks">
+      <li><a href="beranda.html">Beranda</a></li>
+      <li><a href="eksplor.html" class="active">Eksplor</a></li>
+      <li><a href="presensi.html">Presensi</a></li>
+      <li><a href="sertifikat.html">Sertifikat</a></li>
+      <li><a href="history.html">Riwayat</a></li>
+  </ul>
+
+  <div class="navbar-right">
+    <button class="icon-btn" aria-label="Notifikasi">
+      <i class="fa-regular fa-bell"></i>
+      <span class="dot-alert"></span>
+    </button>
+
+    <div class="dropdown user-menu">
+      <button class="user-chip-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://ui-avatars.com/api/?name=Vents+Team&background=6366F1&color=fff&bold=true" alt="Foto profil Vents Team">
+        <span class="d-none d-md-flex flex-column align-items-start lh-1">
+          <span class="uname">Vents Team</span>
+          <span class="urole">Mahasiswa</span>
+        </span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-syn dropdown-menu-end">
+        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-user"></i> Profil</a></li>
+        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Pengaturan</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item logout-item js-logout-trigger" href="#"><i class="fa-solid fa-right-from-bracket"></i> Keluar</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="page-wrap">
+      <div class="hero-band mb-4 fade-up">
+        <span class="eyebrow" style="color:var(--gold);">Eksplor</span>
+        <h2 class="mt-1 mb-2 text-white">Temukan seminar berikutnya</h2>
+        <p class="text-white-50 mb-0">380+ seminar dan webinar aktif minggu ini, dari berbagai kategori.</p>
+      </div>
+
+      <!-- Search + filter toolbar -->
+      <form class="toolbar-syn fade-up" onsubmit="return false;">
+        <div class="row g-2 align-items-center">
+          <div class="col-md-8">
+            <div class="search-bar-syn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="searchInput" placeholder="Cari judul seminar atau nama pemateri...">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <select class="select-syn w-100" id="sortSelect">
+              <option value="terbaru">Urutkan: Terbaru</option>
+              <option value="populer">Urutkan: Terpopuler</option>
+              <option value="az">Urutkan: A-Z</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="toolbar-divider"></div>
+
+        <div class="d-flex flex-wrap gap-2" id="chipFilters">
+          <button type="button" class="chip-filter active" data-cat="semua">Semua</button>
+          <button type="button" class="chip-filter" data-cat="teknologi">Teknologi</button>
+          <button type="button" class="chip-filter" data-cat="bisnis">Bisnis</button>
+          <button type="button" class="chip-filter" data-cat="desain">Desain</button>
+          <button type="button" class="chip-filter" data-cat="karier">Karier</button>
+        </div>
+      </form>
+
+      <div class="grid-cards" id="seminarGrid">
+        <div class="seminar-item" data-cat="teknologi" data-title="Membangun Produk dengan AI Generatif">
+          <div class="event-card fade-up">
+            <div class="event-thumb">
+              <img src="https://picsum.photos/seed/aidata/500/340" alt="Seminar Membangun Produk dengan AI Generatif">
+              <span class="event-badge cat-teknologi" data-cat="teknologi">Teknologi</span>
+              <div class="event-date-chip"><div class="d-num">02</div><div class="d-mon">Ags</div></div>
+            </div>
+            <div class="event-body">
+              <h3 class="event-title line-clamp-2">Membangun Produk dengan AI Generatif</h3>
+              <div class="event-meta">
+                <span><i class="fa-regular fa-user"></i> Rangga Saputra</span>
+                <span><i class="fa-regular fa-clock"></i> 13.00 WIB · Daring</span>
+              </div>
+              <div class="event-divider"></div>
+              <div class="event-footer">
+                <span class="event-price">Gratis</span>
+                <a href="daftar-seminar.html" class="btn-syn btn-syn-primary btn-syn-sm">Daftar seminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="seminar-item" data-cat="desain" data-title="UX Research untuk Produk Digital">
+          <div class="event-card fade-up">
+            <div class="event-thumb">
+              <img src="https://picsum.photos/seed/uxdesign/500/340" alt="Seminar UX Research untuk Produk Digital">
+              <span class="event-badge cat-desain" data-cat="desain">Desain</span>
+              <div class="event-date-chip"><div class="d-num">28</div><div class="d-mon">Jul</div></div>
+            </div>
+            <div class="event-body">
+              <h3 class="event-title line-clamp-2">UX Research untuk Produk Digital</h3>
+              <div class="event-meta">
+                <span><i class="fa-regular fa-user"></i> Alya Ramadhani</span>
+                <span><i class="fa-regular fa-clock"></i> 09.00 WIB · Daring</span>
+              </div>
+              <div class="event-divider"></div>
+              <div class="event-footer">
+                <span class="event-price">Gratis</span>
+                <a href="daftar-seminar.html" class="btn-syn btn-syn-primary btn-syn-sm">Daftar seminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="seminar-item" data-cat="bisnis" data-title="Strategi Keuangan untuk Startup Awal">
+          <div class="event-card fade-up">
+            <div class="event-thumb">
+              <img src="https://picsum.photos/seed/bisniskeuangan/500/340" alt="Seminar Strategi Keuangan untuk Startup Awal">
+              <span class="event-badge cat-bisnis" data-cat="bisnis">Bisnis</span>
+              <div class="event-date-chip"><div class="d-num">06</div><div class="d-mon">Ags</div></div>
+            </div>
+            <div class="event-body">
+              <h3 class="event-title line-clamp-2">Strategi Keuangan untuk Startup Awal</h3>
+              <div class="event-meta">
+                <span><i class="fa-regular fa-user"></i> Bimo Prakoso</span>
+                <span><i class="fa-regular fa-clock"></i> 10.00 WIB · Daring</span>
+              </div>
+              <div class="event-divider"></div>
+              <div class="event-footer">
+                <span class="event-price">Rp75rb</span>
+                <a href="daftar-seminar.html" class="btn-syn btn-syn-primary btn-syn-sm">Daftar seminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="seminar-item" data-cat="karier" data-title="Menyusun CV yang Dilirik Rekruter">
+          <div class="event-card fade-up">
+            <div class="event-thumb">
+              <img src="https://picsum.photos/seed/karircv/500/340" alt="Seminar Menyusun CV yang Dilirik Rekruter">
+              <span class="event-badge cat-karier" data-cat="karier">Karier</span>
+              <div class="event-date-chip"><div class="d-num">09</div><div class="d-mon">Ags</div></div>
+            </div>
+            <div class="event-body">
+              <h3 class="event-title line-clamp-2">Menyusun CV yang Dilirik Rekruter</h3>
+              <div class="event-meta">
+                <span><i class="fa-regular fa-user"></i> Salsa Amelia</span>
+                <span><i class="fa-regular fa-clock"></i> 15.30 WIB · Daring</span>
+              </div>
+              <div class="event-divider"></div>
+              <div class="event-footer">
+                <span class="event-price">Gratis</span>
+                <a href="daftar-seminar.html" class="btn-syn btn-syn-primary btn-syn-sm">Daftar seminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="seminar-item" data-cat="teknologi" data-title="Dasar Keamanan Siber untuk Developer">
+          <div class="event-card fade-up">
+            <div class="event-thumb">
+              <img src="https://picsum.photos/seed/cybersecurity/500/340" alt="Seminar Dasar Keamanan Siber untuk Developer">
+              <span class="event-badge cat-teknologi" data-cat="teknologi">Teknologi</span>
+              <div class="event-date-chip"><div class="d-num">12</div><div class="d-mon">Ags</div></div>
+            </div>
+            <div class="event-body">
+              <h3 class="event-title line-clamp-2">Dasar Keamanan Siber untuk Developer</h3>
+              <div class="event-meta">
+                <span><i class="fa-regular fa-user"></i> Fikri Ardiansyah</span>
+                <span><i class="fa-regular fa-clock"></i> 19.00 WIB · Daring</span>
+              </div>
+              <div class="event-divider"></div>
+              <div class="event-footer">
+                <span class="event-price">Rp50rb</span>
+                <a href="daftar-seminar.html" class="btn-syn btn-syn-primary btn-syn-sm">Daftar seminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="seminar-item" data-cat="bisnis" data-title="Membaca Peluang Pasar dari Data">
+          <div class="event-card fade-up">
+            <div class="event-thumb">
+              <img src="https://picsum.photos/seed/marketdata/500/340" alt="Seminar Membaca Peluang Pasar dari Data">
+              <span class="event-badge cat-bisnis" data-cat="bisnis">Bisnis</span>
+              <div class="event-date-chip"><div class="d-num">15</div><div class="d-mon">Ags</div></div>
+            </div>
+            <div class="event-body">
+              <h3 class="event-title line-clamp-2">Membaca Peluang Pasar dari Data</h3>
+              <div class="event-meta">
+                <span><i class="fa-regular fa-user"></i> Clara Wijaya</span>
+                <span><i class="fa-regular fa-clock"></i> 14.00 WIB · Daring</span>
+              </div>
+              <div class="event-divider"></div>
+              <div class="event-footer">
+                <span class="event-price">Gratis</span>
+                <a href="daftar-seminar.html" class="btn-syn btn-syn-primary btn-syn-sm">Daftar seminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center text-muted-2 mt-4 d-none" id="emptyState">
+        <i class="fa-regular fa-face-frown"></i> Tidak ada seminar yang cocok dengan pencarianmu.
+      </p>
+    </main>
+
+    <footer class="footer-syn">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="beranda.html" class="f-brand">
+            <img src="assets/image/logo2.png" alt="Synear Logo" class="f-brand-logo">
+        </a>
+        <p class="f-desc">Platform seminar digital yang membantu kamu menemukan, mengikuti, dan mencatat setiap pembelajaran — mulai dari presensi hingga e-sertifikat, dalam satu tempat.</p>
+        <div class="f-social">
+          <a href="#" aria-label="Instagram Synear"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="X / Twitter Synear"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn Synear"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube Synear"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h6>Jelajahi</h6>
+        <ul>
+          <li><a href="beranda.html">Beranda</a></li>
+          <li><a href="eksplor.html">Eksplor Seminar</a></li>
+          <li><a href="presensi.html">Presensi</a></li>
+          <li><a href="sertifikat.html">Sertifikat</a></li>
+          <li><a href="history.html">Riwayat</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6>Perusahaan</h6>
+        <ul>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Karier</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Untuk Penyelenggara</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6>Bantuan</h6>
+        <ul>
+          <li><a href="#">Pusat Bantuan</a></li>
+          <li><a href="#">Pertanyaan Umum</a></li>
+          <li><a href="#">Syarat Layanan</a></li>
+          <li><a href="#">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6>Tetap terhubung</h6>
+        <p style="font-size:.85rem; margin-bottom:1rem;">Dapatkan info seminar terbaru langsung ke email kamu.</p>
+        <form class="footer-newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Email kamu" aria-label="Alamat email">
+          <button type="submit" aria-label="Berlangganan"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        <ul class="f-contact mt-3">
+          <li><i class="fa-solid fa-location-dot"></i> Yogyakarta, Indonesia</li>
+          <li><i class="fa-solid fa-envelope"></i> vents@synear.id</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Synear. Semua hak dilindungi.</span>
+      <div class="legal-links">
+        <a href="#">Syarat Layanan</a>
+        <a href="#">Kebijakan Privasi</a>
+        <a href="#">Kebijakan Cookie</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Logout confirm modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius:var(--radius-lg); border:none;">
+      <div class="modal-body text-center p-4">
+        <div class="mb-3 mx-auto" style="width:56px;height:56px;border-radius:50%;background:var(--danger-soft);display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-right-from-bracket" style="color:var(--danger); font-size:1.3rem;"></i>
+        </div>
+        <h5 class="mb-2">Keluar dari Synear?</h5>
+        <p class="text-muted-2 mb-4">Kamu perlu masuk kembali untuk mengakses akun ini.</p>
+        <div class="d-flex gap-2 justify-content-center">
+          <button type="button" class="btn-syn btn-syn-outline" data-bs-dismiss="modal">Tidak</button>
+          <button type="button" class="btn-syn btn-syn-primary" id="confirmLogoutBtn">Ya, keluar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script>
+  /* ---- JS block: live search + category filter + sort ---- */
+  var searchInput = document.getElementById('searchInput');
+  var chips = document.querySelectorAll('.chip-filter');
+  var items = document.querySelectorAll('.seminar-item');
+  var emptyState = document.getElementById('emptyState');
+  var sortSelect = document.getElementById('sortSelect');
+  var grid = document.getElementById('seminarGrid');
+  var activeCat = 'semua';
+
+  function applyFilter() {
+    var query = searchInput.value.trim().toLowerCase();
+    var visibleCount = 0;
+
+    items.forEach(function (item) {
+      var matchesCat = activeCat === 'semua' || item.getAttribute('data-cat') === activeCat;
+      var matchesQuery = item.getAttribute('data-title').toLowerCase().includes(query);
+      var show = matchesCat && matchesQuery;
+      item.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+
+    emptyState.classList.toggle('d-none', visibleCount > 0);
+  }
+
+  searchInput.addEventListener('input', applyFilter);
+
+  function setActiveCategory(cat) {
+    activeCat = cat;
+    chips.forEach(function (c) {
+      c.classList.toggle('active', c.getAttribute('data-cat') === cat);
+    });
+    applyFilter();
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      setActiveCategory(chip.getAttribute('data-cat'));
+    });
+  });
+
+  /* ---- JS block: clicking a card's category badge filters the grid by that category ---- */
+  document.querySelectorAll('.event-badge').forEach(function (badge) {
+    badge.addEventListener('click', function (e) {
+      e.preventDefault();
+      var cat = badge.getAttribute('data-cat');
+      setActiveCategory(cat);
+      document.querySelector('.toolbar-syn').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      synToast('Menampilkan kategori: ' + badge.textContent.trim(), 'success');
+    });
+  });
+
+  sortSelect.addEventListener('change', function () {
+    var itemArray = Array.prototype.slice.call(items);
+    if (sortSelect.value === 'az') {
+      itemArray.sort(function (a, b) {
+        return a.getAttribute('data-title').localeCompare(b.getAttribute('data-title'));
+      });
+    } else if (sortSelect.value === 'populer') {
+      itemArray.reverse();
+    }
+    itemArray.forEach(function (item) { grid.appendChild(item); });
+  });
+</script>
+</body>
+</html>
