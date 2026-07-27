@@ -1,9 +1,3 @@
-/* =========================================================
-   SYNEAR — Design System (v3, bright palette)
-   Palette  : Ink #12142B / Bg #F8F8FC / Accent #6366F1 / Dark #4338CA
-   Type     : Poppins (display) + Inter (body) — two typefaces only
-   Signature: dashed "ticket" divider used across cards
-   ========================================================= */
 :root{
   --navy:#4338CA;
   --navy-2:#6D28D9;
@@ -96,7 +90,6 @@ a:hover{
   overflow:hidden;
 }
 
-/* ---------- Buttons ---------- */
 .btn-syn{
   font-family:var(--font-display);
   font-weight:600;
@@ -170,12 +163,11 @@ a:hover{
 }
 
 .brand-logo {
-    height: 25px; /* Atur tinggi sesuai kebutuhan desain Anda */
-    width: auto;  /* Menjaga proporsi gambar tetap proporsional */
+    height: 25px; 
+    width: auto;  
     display: block;
 }
 
-/* ---------- Auth pages (login / register) ---------- */
 .auth-shell{
   min-height:100vh;
   display:grid;
@@ -240,7 +232,6 @@ a:hover{
   margin-top:2rem;
 }
 
-/* ---------- Form controls ---------- */
 .form-syn label{
   font-weight:600;
   font-size:.85rem;
@@ -304,7 +295,6 @@ a:hover{
   transition:width .25s ease, background .25s ease;
 }
 
-/* ---------- Top navbar (dashboard pages) ---------- */
 .navbar-syn{
   background:var(--surface);
   border-bottom:1px solid var(--line);
@@ -518,7 +508,6 @@ a:hover{
   }
 }
 
-/* ---------- Stat cards ---------- */
 .stat-card{
   background:var(--surface);
   border-radius:var(--radius-md);
@@ -567,7 +556,6 @@ a:hover{
   font-size:.85rem;
 }
 
-/* ---------- Ticket card (used for beranda quick list) ---------- */
 .ticket{
   background:var(--surface);
   border-radius:var(--radius-md);
@@ -679,7 +667,6 @@ a:hover{
   }
 }
 
-/* ---------- Card grid — pure CSS Grid, guarantees identical card sizes ---------- */
 .grid-cards{
   display:grid;
   grid-template-columns:repeat(3, 1fr);
@@ -703,7 +690,6 @@ a:hover{
   }
 }
 
-/* ---------- Event card (eksplor grid) — uniform-height card ---------- */
 .event-card{
   background:var(--surface);
   border:1px solid var(--line);
@@ -863,7 +849,6 @@ a:hover{
   color:var(--success);
 }
 
-/* ---------- Section headers ---------- */
 .section-head{
   display:flex;
   align-items:flex-end;
@@ -881,7 +866,6 @@ a:hover{
   font-weight:700;
 }
 
-/* ---------- Table (history / presensi) ---------- */
 .table-syn{
   background:var(--surface);
   border-radius:var(--radius-md);
@@ -949,7 +933,6 @@ a:hover{
   color:var(--accent-dark);
 }
 
-/* ---------- Video section ---------- */
 .video-frame{
   border-radius:var(--radius-lg);
   overflow:hidden;
@@ -965,7 +948,6 @@ a:hover{
   object-fit:cover;
 }
 
-/* ---------- Certificate card — uniform-height, no preview eye ---------- */
 .cert-card{
   background:var(--surface);
   border:1px solid var(--line);
@@ -1028,7 +1010,6 @@ a:hover{
   margin-top:auto;
 }
 
-/* ---------- Presensi timer ---------- */
 .timer-box{
   background:radial-gradient(circle at 90% 10%, rgba(236,72,153,.45), transparent 50%), var(--gradient-dark);
   color:#fff;
@@ -1064,7 +1045,6 @@ a:hover{
   color:#c8283d;
 }
 
-/* ---------- Full site footer ---------- */
 .footer-syn{
   background:var(--gradient-dark);
   color:rgba(255,255,255,.68);
@@ -1091,17 +1071,15 @@ a:hover{
   }
 }
 
-/* Mengatur pembungkus utama logo footer */
 .f-brand {
     display: inline-flex;
-    align-items: center;  /* Menyejajarkan logo di tengah secara vertikal */
+    align-items: center;  
     text-decoration: none;
 }
 
-/* Mengatur ukuran gambar logo footer */
 .f-brand-logo {
-    height: 30px;         /* Ukuran sedikit lebih kecil dari navbar utama */
-    width: auto;          /* Menjaga proporsi gambar agar tidak gepeng */
+    height: 30px;         
+    width: auto;          
     display: block;
     object-fit: contain;
 }
@@ -1242,7 +1220,6 @@ a:hover{
   flex-wrap:wrap;
 }
 
-/* ---------- Toast ---------- */
 .syn-toast{
   position:fixed;
   bottom:1.5rem;
@@ -1276,7 +1253,6 @@ a:hover{
   background:var(--danger);
 }
 
-/* ---------- Filter chips ---------- */
 .chip-filter{
   border:1.5px solid var(--line);
   background:var(--surface);
@@ -1295,7 +1271,6 @@ a:hover{
   background:var(--accent-soft);
 }
 
-/* ---------- Toolbar (search + sort + filters panel) ---------- */
 .toolbar-syn{
   background:var(--surface);
   border:1px solid var(--line);
@@ -1379,7 +1354,6 @@ a:hover{
   }
 }
 
-/* ---------- Page hero band (used on several pages) ---------- */
 .hero-band{
   border-radius:var(--radius-lg);
   background:radial-gradient(circle at 15% 20%, rgba(255,176,32,.2), transparent 45%), radial-gradient(circle at 85% 30%, rgba(236,72,153,.4), transparent 50%), linear-gradient(135deg, var(--navy) 0%, #7C3AED 100%);
@@ -1389,7 +1363,6 @@ a:hover{
   overflow:hidden;
 }
 
-/* ---------- Utility fade-in ---------- */
 .fade-up{
   opacity:0;
   transform:translateY(16px);

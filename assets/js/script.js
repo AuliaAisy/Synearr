@@ -1,14 +1,5 @@
-/* =========================================================
-   SYNEAR — shared utilities (loaded on every page)
-   1) mobile navbar toggle
-   2) logout confirmation (Ya / Tidak)
-   3) toast notification helper
-   4) scroll fade-in observer + time-of-day greeting
-   ========================================================= */
-
 document.addEventListener('DOMContentLoaded', function () {
 
-  // ---- 1) Mobile navbar toggle ----
   var navToggleBtn = document.getElementById('navToggleBtn');
   var navbarLinks = document.getElementById('navbarLinks');
   if (navToggleBtn && navbarLinks) {
@@ -20,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---- 2) Logout confirmation modal (Ya / Tidak) ----
   var logoutTriggers = document.querySelectorAll('.js-logout-trigger');
   var logoutModalEl = document.getElementById('logoutModal');
   if (logoutTriggers.length && logoutModalEl && window.bootstrap) {
@@ -39,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // ---- 4a) Fade-in on scroll for elements marked .fade-up ----
   var faders = document.querySelectorAll('.fade-up');
   if ('IntersectionObserver' in window && faders.length) {
     var observer = new IntersectionObserver(function (entries) {
@@ -55,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
     faders.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // ---- 4b) Personalized greeting based on time of day, used on beranda.html ----
   var greetEl = document.querySelector('[data-greeting]');
   if (greetEl) {
     var hour = new Date().getHours();
@@ -64,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// ---- 3) Toast helper: window.synToast('Pesan', 'success'|'danger'|'info') ----
 window.synToast = function (message, type) {
   var existing = document.querySelector('.syn-toast');
   if (existing) existing.remove();
